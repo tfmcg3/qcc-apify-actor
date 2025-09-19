@@ -1,0 +1,14 @@
+
+{
+  "name": "qcc-apify-actor",
+  "version": "1.0.0",
+  "description": "Quincy Cannabis Co. — Apify Actor (GraphQL + DOM + OCR + AI) for Dutchie menus & promos",
+  "type": "module",
+  "dependencies": {
+    "apify": "^3.0.0",
+    "crawlee": "^3.8.0",
+    "sharp": "^0.33.4",
+    "tesseract.js": "^5.1.1",
+    "node-fetch": "^3.3.2"
+  }
+}
