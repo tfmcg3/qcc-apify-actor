@@ -1,0 +1,20 @@
+
+{
+  "title": "QCC Competitive Intelligence — OCR Promotions Overview",
+  "widgets": [
+    {
+      "type": "table",
+      "dataset": "QCC_Menu_OCR_YYYYMMDD",
+      "columns": [
+        "timestamp_iso",
+        "competitor",
+        "page_label",
+        "title",
+        "details",
+        "discount_pct",
+        "start_date",
+        "end_date"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+
+{
+  "startUrls": [
+    { "url": "https://dutchie.com/dispensary/quincy-cannabis-quincy-retail-rec" }
+  ],
+  "proxyCountry": "US",
+  "waitForNetworkIdleMs": 2000,
+  "useOCRBackup": true,
+  "useAIParser": true,
+  "openaiModel": "gpt-4o-mini",
+  "promoHeuristicsEnabled": true
+}

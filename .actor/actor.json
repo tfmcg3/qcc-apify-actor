@@ -1,0 +1,41 @@
+
+{
+  "actorSpecification": 1,
+  "name": "qcc-dutchie-menu-scraper-pro",
+  "title": "QCC Dutchie Scraper (GraphQL + DOM + OCR+AI)",
+  "version": "1.0.0",
+  "buildTag": "latest",
+  "dockerfile": "Dockerfile",
+  "input": {
+    "title": "Input",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+      "startUrls": {
+        "title": "Menu URLs",
+        "type": "array",
+        "editor": "requestListSources",
+        "items": { "type": "object", "properties": { "url": { "type": "string" } } },
+        "description": "QCC first; then add competitors within ~10 miles."
+      },
+      "proxyCountry": { "title": "Proxy country", "type": "string", "default": "US" },
+      "proxyGroups": {
+        "title": "Apify Proxy groups (optional)",
+        "type": "array",
+        "items": { "type": "string" },
+        "description": "e.g., [\"RESIDENTIAL\"] if enabled."
+      },
+      "datasetName": { "title": "Primary dataset name (optional)", "type": "string" },
+      "waitForNetworkIdleMs": { "title": "Extra wait after load (ms)", "type": "integer", "default": 2000 },
+
+      "useOCRBackup": { "title": "Enable OCR backup", "type": "boolean", "default": true },
+      "useAIParser":  { "title": "Use AI to parse OCR text", "type": "boolean", "default": true },
+      "openaiModel":  { "title": "OpenAI model for parsing", "type": "string", "default": "gpt-4o-mini" },
+      "ocrDatasetName": { "title": "Dataset for OCR output (optional; defaults to daily name)", "type": "string" },
+      "promoHeuristicsEnabled": { "title": "Heuristic promo detector (regex)", "type": "boolean", "default": true },
+
+      "gchatWebhook": { "title": "Google Chat Webhook (optional; env preferred)", "type": "string" }
+    },
+    "required": ["startUrls"]
+  }
+}
